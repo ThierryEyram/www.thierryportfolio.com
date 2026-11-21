@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de DZABODO Eyram Koudzo Thierry — Data Scientist, Économiste Quantitatif, Analyste Statistique et spécialiste Suivi & Évaluation (M&E) basé à Lomé, Togo." />
+  <title>DZABODO Eyram Koudzo Thierry — Data Scientist · Économiste Quantitatif · Analyste Statistique</title>
+
+  <!-- Polices élégantes (avec repli système automatique hors ligne) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fond subtil architectural -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#accueil" class="brand" aria-label="Retour à l'accueil">
+        <span class="brand-monogram">DT</span>
+        <span class="brand-text">
+          <strong>Eyram Thierry DZABODO</strong>
+          <small>Data Science &middot; Quant &middot; M&amp;E</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="#profil" class="nav-link">Profil</a>
+        <a href="#expertises" class="nav-link">Compétences</a>
+        <a href="#projets" class="nav-link">Réalisations</a>
+        <a href="#parcours" class="nav-link">Parcours</a>
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>Disponible pour missions, conseil &amp; opportunités</span>
+          </div>
+
+          <p class="hero-eyebrow">Data Scientist &middot; Économiste Quantitatif &middot; Analyste Statistique</p>
+
+          <h1 class="hero-title">
+            DZABODO Eyram Koudzo Thierry &mdash; transformer les <em>données complexes</em> en décisions stratégiques.
+          </h1>
+
+          <p class="hero-lead">
+            Titulaire d'un <strong>Master Recherche en Économie (Monnaie, Banque, Finance, Fiscalité)</strong> et certifié <strong>IBM Data Science</strong>, je combine modélisation économétrique, analyse financière quantitative, dispositifs de suivi-évaluation (M&amp;E) et intelligence artificielle au service de la prise de décision.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projets" class="btn btn-primary">
+              Découvrir mes réalisations
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            <a href="https://github.com/ThierryEyram" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub &nearr;</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Localisation</span>
+              <span class="meta-value">Lomé, Togo (Mobilité &amp; Remote)</span>
+            </div>
+            <div class="meta-divider" aria-hidden="true"></div>
+            <div class="meta-item">
+              <span class="meta-label">Stack analytique</span>
+              <span class="meta-value mono">Python &middot; R &middot; Stata &middot; SQL &middot; Kobo/XLSForm</span>
+            </div>
+            <div class="meta-divider" aria-hidden="true"></div>
+            <div class="meta-item">
+              <span class="meta-label">Langues</span>
+              <span class="meta-value">Français (C2) &middot; Anglais (A2)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Console quantitative interactive -->
+        <div class="hero-visual reveal" style="--delay: 120ms">
+          <div class="quant-card">
+            <div class="quant-card-header">
+              <div>
+                <span class="quant-kicker mono">LABORATOIRE ANALYTIQUE INTERACTIF</span>
+                <h2 class="quant-title" id="chartTitle">Simulation Stochastique — Monte Carlo</h2>
+              </div>
+              <span class="quant-badge mono" id="chartBadge">N = 250 TRAJ.</span>
+            </div>
+
+            <div class="quant-tabs" role="tablist" aria-label="Choisir un modèle analytique">
+              <button class="quant-tab active" role="tab" aria-selected="true" data-mode="montecarlo">Monte Carlo</button>
+              <button class="quant-tab" role="tab" aria-selected="false" data-mode="did">Impact M&amp;E</button>
+              <button class="quant-tab" role="tab" aria-selected="false" data-mode="frontier">Portefeuille BRVM</button>
+            </div>
+
+            <div class="quant-canvas-wrap">
+              <canvas id="quantCanvas" aria-label="Graphique quantitatif interactif"></canvas>
+            </div>
+
+            <div class="quant-metrics" id="chartMetrics">
+              <div class="q-metric">
+                <span class="q-metric-label">Rendement espéré</span>
+                <strong class="q-metric-val mono text-teal" id="metric1">+11.4%</strong>
+              </div>
+              <div class="q-metric">
+                <span class="q-metric-label">Quantile bas (P10)</span>
+                <strong class="q-metric-val mono text-gold" id="metric2">-6.8%</strong>
+              </div>
+              <div class="q-metric">
+                <span class="q-metric-label">Ratio de Sharpe</span>
+                <strong class="q-metric-val mono" id="metric3">1.64</strong>
+              </div>
+            </div>
+
+            <div class="quant-footer">
+              <span class="mono" id="chartFootnote">Modèle géométrique brownien &middot; Horizon 24 mois</span>
+              <button class="quant-refresh mono" id="refreshChart" type="button" title="Générer une nouvelle simulation">
+                ↻ Recalculer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bandeau KPI fidèle au parcours -->
+      <div class="container">
+        <div class="kpi-strip reveal">
+          <div class="kpi-item">
+            <span class="kpi-number mono">+3,18 %</span>
+            <span class="kpi-label">Performance portefeuille BRVM (Concours Sika-Finance UEMOA)</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-number mono" data-count="2" data-suffix=" prog. GIZ">0</span>
+            <span class="kpi-label">Appui analytique &amp; M&amp;E (GIZ PROCOMP &amp; Forest for Future F4F)</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-number mono" data-count="7" data-suffix="+">0</span>
+            <span class="kpi-label">Certifications spécialisées (IBM, AFD, CENTIF, Paris-Saclay, IAI)</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-number mono">Master II</span>
+            <span class="kpi-label">Recherche en Économie : Monnaie, Banque, Finance, Fiscalité</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos / Positionnement -->
+    <section class="section" id="profil">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag mono">01 // PROFIL PROFESSIONNEL</span>
+          <h2 class="section-title">Rigueur <em>économétrique</em>, maîtrise <em>data science</em> et culture terrain <em>M&amp;E</em></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio reveal">
+            <p class="about-highlight">
+              Diplômé d'un Master Recherche en Économie (Monnaie, Banque, Finance, Fiscalité) à l'Université de Lomé, je conçois des analyses quantitatives et des solutions data de bout en bout.
+            </p>
+            <p>
+              J'interviens sur l'ensemble de la chaîne de valeur de la donnée : conception de questionnaires numériques <strong>XLSForm / KoboCollect</strong>, collecte et constitution de groupes de contrôle, nettoyage et structuration en <strong>Python / SQL</strong>, modélisation économétrique (<strong>VAR, GARCH, CAPM</strong>) et modèles de <strong>Machine Learning &amp; IA</strong>.
+            </p>
+            <p>
+              En parallèle de mes missions en évaluation de programmes (GIZ PROCOMP, F4F) et en gestion de portefeuille (BRVM / Sika-Finance), je transmets ma passion pour la programmation Python et l'IA en tant que tuteur auprès du <strong>Ministère de l'Économie Numérique</strong>.
+            </p>
+
+            <div class="about-principles">
+              <div class="principle">
+                <span class="principle-num mono">I.</span>
+                <div>
+                  <strong>Maîtrise complète du cycle de la donnée</strong>
+                  <span>De la saisie terrain (XLSForm/Kobo) à l'apurement, la structuration SQL et l'automatisation Python.</span>
+                </div>
+              </div>
+              <div class="principle">
+                <span class="principle-num mono">II.</span>
+                <div>
+                  <strong>Exigence statistique &amp; financière</strong>
+                  <span>Séries temporelles, données de panel, inférence causale, évaluation d'impact et optimisation rendement/risque.</span>
+                </div>
+              </div>
+              <div class="principle">
+                <span class="principle-num mono">III.</span>
+                <div>
+                  <strong>Conformité, éthique &amp; pédagogie</strong>
+                  <span>Certifié LBC/FT (CENTIF) et Suivi-Évaluation (AFD), avec une communication claire pour les décideurs.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pillars-stack">
+            <article class="pillar-card reveal">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z" />
+                  <path d="M5 10v2a7 7 0 0 0 14 0v-2" />
+                  <path d="M12 19v3M8 22h8" />
+                </svg>
+              </div>
+              <div>
+                <h3>Data Science &amp; Intelligence Artificielle</h3>
+                <p>Développement d'algorithmes de Machine Learning (Scikit-learn, TensorFlow), scripts d'automatisation Python, modèles prédictifs et traitement du langage naturel (NLP).</p>
+              </div>
+            </article>
+
+            <article class="pillar-card reveal" style="--delay: 80ms">
+              <div class="pillar-icon icon-teal">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M3 3v18h18" />
+                  <path d="M7 15l4-4 3 3 6-7" />
+                </svg>
+              </div>
+              <div>
+                <h3>Analyse Statistique, Économétrie &amp; Finance</h3>
+                <p>Modélisation économétrique avancée (VAR, GARCH, CAPM, panels, équations simultanées), inférence statistique, évaluation d'impact et gestion quantitative de portefeuille.</p>
+              </div>
+            </article>
+
+            <article class="pillar-card reveal" style="--delay: 160ms">
+              <div class="pillar-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <ellipse cx="12" cy="5" rx="8" ry="3" />
+                  <path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+                  <path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6" />
+                </svg>
+              </div>
+              <div>
+                <h3>Ingénierie de Données &amp; Suivi-Évaluation (M&amp;E)</h3>
+                <p>Conception de masques XLSForm, déploiement KoboCollect, supervision d'équipes terrain, contrôle qualité, bases relationnelles SQL et rapports d'évaluation d'impact.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences & Stack technique -->
+    <section class="section section-alt" id="expertises">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag mono">02 // COMPÉTENCES TECHNIQUES</span>
+          <h2 class="section-title">Boîte à outils <em>quantitative</em>, <em>M&amp;E</em> et <em>Data Science</em></h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <div class="skill-group-head">
+              <span class="mono skill-code">QUANT-01</span>
+              <h3>Économétrie &amp; Finance Quantitative</h3>
+            </div>
+            <ul class="skill-bars">
+              <li>
+                <div class="skill-row"><span>Modélisation Économétrique (VAR, GARCH, CAPM)</span><span class="mono">Avancé</span></div>
+                <div class="bar"><span style="--w: 94%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Séries Temporelles, Panels &amp; Équations Simultanées</span><span class="mono">Avancé</span></div>
+                <div class="bar"><span style="--w: 92%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Analyse de Portefeuille &amp; Gestion des Risques (BRVM)</span><span class="mono">Avancé</span></div>
+                <div class="bar"><span style="--w: 90%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Conformité Financière &amp; LBC/FT (Certifié CENTIF)</span><span class="mono">Certifié</span></div>
+                <div class="bar"><span style="--w: 86%"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal" style="--delay: 80ms">
+            <div class="skill-group-head">
+              <span class="mono skill-code">ME-02</span>
+              <h3>Suivi-Évaluation &amp; Ingénierie Data</h3>
+            </div>
+            <ul class="skill-bars">
+              <li>
+                <div class="skill-row"><span>XLSForm &amp; Déploiement KoboCollect</span><span class="mono">Expert</span></div>
+                <div class="bar bar-teal"><span style="--w: 96%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Évaluation d'Impact &amp; Groupes de Contrôle (M&amp;E)</span><span class="mono">Avancé</span></div>
+                <div class="bar bar-teal"><span style="--w: 92%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Apurement, Contrôle Qualité &amp; Bases SQL</span><span class="mono">Avancé</span></div>
+                <div class="bar bar-teal"><span style="--w: 91%"></span></div>
+              </li>
+              <li>
+                <div class="skill-row"><span>Reporting Financier &amp; Analyse de Rentabilité (Excel)</span><span class="mono">Avancé</span></div>
+                <div class="bar bar-teal"><span style="--w: 90%"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group reveal" style="--delay: 160ms">
+            <div class="skill-group-head">
+              <span class="mono skill-code">DS-03</span>
+              <h3>Programmation, ML &amp; Visualisation</h3>
+            </div>
+            <div class="chip-cloud">
+              <span class="chip chip-strong">Python</span>
+              <span class="chip chip-strong">Pandas / NumPy</span>
+              <span class="chip chip-strong">Scikit-learn</span>
+              <span class="chip chip-strong">TensorFlow</span>
+              <span class="chip chip-strong">R / RStudio</span>
+              <span class="chip chip-strong">Stata</span>
+              <span class="chip chip-strong">SQL</span>
+              <span class="chip">Machine Learning</span>
+              <span class="chip">NLP (IA)</span>
+              <span class="chip">Matplotlib</span>
+              <span class="chip">Seaborn</span>
+              <span class="chip">ggplot2</span>
+              <span class="chip">KoboCollect</span>
+              <span class="chip">XLSForm</span>
+              <span class="chip">Excel Avancé</span>
+              <span class="chip">Git / GitHub</span>
+            </div>
+            <p class="skill-note">
+              Automatisation des traitements statistiques en Python, visualisations claires sous Matplotlib/Seaborn/ggplot2 et code versionné sur GitHub.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réalisations & Études de cas -->
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <div>
+            <span class="section-tag mono">03 // RÉALISATIONS &amp; MISSIONS</span>
+            <h2 class="section-title">Missions clés &amp; <em>études de cas</em></h2>
+          </div>
+
+          <div class="filter-bar" role="group" aria-label="Filtrer les réalisations par domaine">
+            <button class="filter-btn active" data-filter="all" type="button">Tous</button>
+            <button class="filter-btn" data-filter="quant" type="button">Finance Quant</button>
+            <button class="filter-btn" data-filter="me" type="button">Suivi &amp; Évaluation</button>
+            <button class="filter-btn" data-filter="data" type="button">Data Science &amp; IA</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projet 1 -->
+          <article class="project-card reveal" data-categories="quant" data-project-id="sika-brvm">
+            <div class="project-top">
+              <span class="project-cat mono">Finance Quant &middot; BRVM</span>
+              <span class="project-year mono">Avr – Juin 2026</span>
+            </div>
+            <h3 class="project-title">Gestion Active de Portefeuille BRVM — Concours Sika-Finance (UEMOA)</h3>
+            <p class="project-desc">
+              Allocation stratégique et tactique d'actifs cotés sur la BRVM combinant analyse fondamentale, analyse technique et modèles quantitatifs rendement/risque.
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">+3,18 %</strong><span>Performance générale</span></div>
+              <div><strong class="mono text-gold">BRVM</strong><span>Marché UEMOA</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>Portefeuille</span><span>CAPM</span><span>Risque</span><span>UEMOA</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="project-card reveal" data-categories="me data" data-project-id="giz-procomp">
+            <div class="project-top">
+              <span class="project-cat mono">M&amp;E &middot; Data Analysis</span>
+              <span class="project-year mono">Fév – Juin 2026</span>
+            </div>
+            <h3 class="project-title">Traitement &amp; Automatisation Data — Programme GIZ PROCOMP (Interprofessions)</h3>
+            <p class="project-desc">
+              Nettoyage, apurement, structuration de bases terrain et automatisation en Python d'analyses descriptives et inférentielles pour les rapports d'évaluation (Cabinet AS Solution).
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">Python</strong><span>Scripts automatisés</span></div>
+              <div><strong class="mono text-gold">GIZ</strong><span>Interprofessions</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>Python</span><span>Pandas</span><span>Statistiques</span><span>PROCOMP</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="project-card reveal" data-categories="me" data-project-id="giz-f4f">
+            <div class="project-top">
+              <span class="project-cat mono">Suivi &amp; Évaluation &middot; Impact</span>
+              <span class="project-year mono">2025 – 2026</span>
+            </div>
+            <h3 class="project-title">Appui à l'Évaluation d'Impact &amp; Groupe de Contrôle — Programme F4F (GIZ)</h3>
+            <p class="project-desc">
+              Programmation XLSForm (KoboCollect), supervision terrain, contrôle qualité, constitution du groupe de contrôle de coopératives non bénéficiaires et analyses pour les rapports d'impact.
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">XLSForm</strong><span>KoboCollect</span></div>
+              <div><strong class="mono text-gold">Contrefactuel</strong><span>Groupe contrôle</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>KoboCollect</span><span>XLSForm</span><span>Évaluation</span><span>F4F-GIZ</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <!-- Projet 4 -->
+          <article class="project-card reveal" data-categories="quant data" data-project-id="econometrie-finance">
+            <div class="project-top">
+              <span class="project-cat mono">Économétrie &middot; Recherche</span>
+              <span class="project-year mono">2025</span>
+            </div>
+            <h3 class="project-title">Modélisation Économétrique Financière — Séries Temporelles, VAR &amp; GARCH</h3>
+            <p class="project-desc">
+              Travaux de recherche en Monnaie, Banque, Finance et Fiscalité : modélisation de la volatilité, dynamique macro-financière, données de panel et modèles à équations simultanées.
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">VAR/GARCH</strong><span>Séries &amp; panels</span></div>
+              <div><strong class="mono text-gold">Master II</strong><span>Université de Lomé</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>R / RStudio</span><span>Stata</span><span>CAPM</span><span>GARCH</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <!-- Projet 5 -->
+          <article class="project-card reveal" data-categories="data" data-project-id="ibm-ml-nlp">
+            <div class="project-top">
+              <span class="project-cat mono">Data Science &middot; IA &amp; NLP</span>
+              <span class="project-year mono">2026</span>
+            </div>
+            <h3 class="project-title">Modèles Prédictifs Machine Learning &amp; NLP — Certificat IBM Data Science</h3>
+            <p class="project-desc">
+              Conception de pipelines prédictifs supervisés, modèles de deep learning et extraction d'informations par NLP avec Python, Scikit-learn, TensorFlow et SQL (Togo Data Lab).
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">ML &amp; NLP</strong><span>Scikit / TensorFlow</span></div>
+              <div><strong class="mono text-gold">IBM</strong><span>Togo Data Lab</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>Python</span><span>Scikit-learn</span><span>TensorFlow</span><span>SQL</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+
+          <!-- Projet 6 -->
+          <article class="project-card reveal" data-categories="data" data-project-id="tutorat-men">
+            <div class="project-top">
+              <span class="project-cat mono">Transmission &middot; Python &amp; IA</span>
+              <span class="project-year mono">2025 – Aujourd'hui</span>
+            </div>
+            <h3 class="project-title">Formation Python &amp; Initiation à l'IA — Ministère de l'Économie Numérique</h3>
+            <p class="project-desc">
+              Encadrement technique d'apprenants à Lomé et Kara sur la programmation Python, l'analyse de données avec Pandas/NumPy et les fondamentaux de l'Intelligence Artificielle.
+            </p>
+            <div class="project-kpi-row">
+              <div><strong class="mono text-teal">Lomé &amp; Kara</strong><span>Tuteur Freelance</span></div>
+              <div><strong class="mono text-gold">Python / IA</strong><span>Pandas &amp; NumPy</span></div>
+            </div>
+            <div class="project-tags mono">
+              <span>Python</span><span>Pandas</span><span>NumPy</span><span>IA</span>
+            </div>
+            <button class="project-link" type="button">
+              Voir les détails <span aria-hidden="true">&rarr;</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours, Certifications & Références -->
+    <section class="section section-alt" id="parcours">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag mono">04 // PARCOURS, FORMATIONS &amp; RÉFÉRENCES</span>
+          <h2 class="section-title">Expériences professionnelles, <em>diplômes</em> &amp; certifications</h2>
+        </div>
+
+        <div class="timeline-grid">
+          <!-- Expériences -->
+          <div class="timeline-col reveal">
+            <h3 class="timeline-heading">Expériences professionnelles</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-date mono">Février 2026 — Juin 2026</span>
+                <h4>Analyste de Données</h4>
+                <p class="timeline-org">Cabinet AS Solution – Collecte GIZ PROCOMP (Interprofessions) &middot; Lomé, Togo</p>
+                <p class="timeline-desc">Nettoyage, apurement et structuration des bases terrain ; analyses descriptives et inférentielles pour les rapports d'évaluation ; automatisation par scripts Python.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">Avril 2026 — Juin 2026</span>
+                <h4>Portfolio Manager (Concours Sika-Finance)</h4>
+                <p class="timeline-org">Sika Finance – Plateforme boursière UEMOA (BRVM)</p>
+                <p class="timeline-desc">Gestion d'un portefeuille virtuel d'actifs cotés sur la BRVM (+3,18 % de performance générale), analyse fondamentale/technique et optimisation rendement/risque.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">Avril 2026</span>
+                <h4>Agent de collecte — Groupe de contrôle</h4>
+                <p class="timeline-org">Programme Forest for Future (F4F) – GIZ</p>
+                <p class="timeline-desc">Identification et collecte des coopératives cibles non bénéficiaires afin de constituer le groupe de contrôle de l'étude d'évaluation d'impact F4F.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">Août 2025 — Aujourd'hui</span>
+                <h4>Tuteur en Informatique &amp; IA (Freelance)</h4>
+                <p class="timeline-org">Ministère de l'Économie Numérique &middot; Lomé &amp; Kara</p>
+                <p class="timeline-desc">Enseignement de Python, initiation à l'Intelligence Artificielle et accompagnement sur Pandas et NumPy.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">Août 2025 — Novembre 2025</span>
+                <h4>Consultant Associé (Suivi-Évaluation)</h4>
+                <p class="timeline-org">GIZ – SHEK &amp; CO Service &middot; Lomé, Togo</p>
+                <p class="timeline-desc">Appui à l'évaluation du programme F4F : questionnaires techniques, programmation XLSForm (KoboCollect), supervision d'équipe, contrôle qualité et analyses d'impact.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">2021 — 2022</span>
+                <h4>Gérant</h4>
+                <p class="timeline-org">CREATIVESWEB &middot; Lomé, Togo</p>
+                <p class="timeline-desc">Coordination opérationnelle, solutions digitales pour la gestion financière, analyse de rentabilité et reporting financier sous Excel avancé.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formation & Certifications -->
+          <div class="timeline-col reveal" style="--delay: 100ms">
+            <h3 class="timeline-heading">Formation universitaire</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-date mono">2026</span>
+                <h4>Certificat Professionnel IBM Data Science</h4>
+                <p class="timeline-org">Togo Data Lab (Coursera)</p>
+                <p class="timeline-desc">Python pour la data science, SQL, visualisation, Machine Learning supervisé/non supervisé et projets appliqués.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">2025</span>
+                <h4>Master Recherche en Économie (Monnaie, Banque, Finance, Fiscalité)</h4>
+                <p class="timeline-org">Université de Lomé</p>
+                <p class="timeline-desc">Économie monétaire et financière, économétrie avancée (séries temporelles, panels, VAR/GARCH), marchés financiers et politiques publiques.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">2021</span>
+                <h4>Licence Fondamentale en Économie (Option Économie Internationale)</h4>
+                <p class="timeline-org">Université de Lomé</p>
+                <p class="timeline-desc">Macroéconomie internationale, commerce extérieur, statistiques appliquées et analyse économique.</p>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-date mono">2015</span>
+                <h4>Baccalauréat Scientifique (Série D)</h4>
+                <p class="timeline-org">Lycée NDA Notsé</p>
+              </div>
+            </div>
+
+            <div class="certs-box">
+              <h3 class="timeline-heading">Certifications clés</h3>
+              <ul class="certs-list">
+                <li>
+                  <strong>Agence Française de Développement (AFD)</strong>
+                  <span>Certificat Suivi et Évaluation d'un projet de développement</span>
+                </li>
+                <li>
+                  <strong>CENTIF</strong>
+                  <span>Certification en Lutte contre le Blanchiment d'Argent et le Financement du Terrorisme (LBC/FT)</span>
+                </li>
+                <li>
+                  <strong>Université Paris-Saclay</strong>
+                  <span>Certificat en statistique avec le langage R</span>
+                </li>
+                <li>
+                  <strong>IAI Lomé (2023)</strong>
+                  <span>Programmation Python appliquée à la Data Science</span>
+                </li>
+                <li>
+                  <strong>LinkedIn Learning</strong>
+                  <span>Python pour la Data Science (Série) &middot; Fondements des statistiques &middot; Gestion de projet &amp; éthique</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Références académiques et professionnelles -->
+        <div class="notes-block reveal">
+          <div class="notes-head">
+            <h3 class="timeline-heading">Références académiques &amp; professionnelles</h3>
+            <span class="mono notes-sub">Coordonnées directes disponibles sur demande</span>
+          </div>
+          <div class="notes-grid">
+            <article class="note-card">
+              <span class="mono note-meta">Référence Académique</span>
+              <h4>Prof. OKEY Mawuse</h4>
+              <p>Professeur Titulaire &mdash; Université de Lomé</p>
+            </article>
+            <article class="note-card">
+              <span class="mono note-meta">Référence Suivi-Évaluation</span>
+              <h4>M. Kouakou D. Eric DAYE</h4>
+              <p>Spécialiste Suivi-Évaluation &mdash; Programme F4F (GIZ)</p>
+            </article>
+            <article class="note-card">
+              <span class="mono note-meta">Référence Académique</span>
+              <h4>Prof. SODOKIN Koffi</h4>
+              <p>Maître de Conférences &mdash; Université de Lomé</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <div class="contact-info">
+            <span class="section-tag mono">05 // PRENDRE CONTACT</span>
+            <h2 class="section-title">Discutons de vos projets <em>data</em>, <em>financiers</em> ou <em>M&amp;E</em></h2>
+            <p class="contact-lead">
+              Disponible à Lomé et à distance pour des postes, missions de consultance en analyse quantitative, évaluation d'impact, ingénierie de données ou formations Python &amp; IA.
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:kdzabodo@gmail.com" class="contact-link-card">
+                <span class="mono contact-link-label">Email direct</span>
+                <strong>kdzabodo@gmail.com</strong>
+              </a>
+              <a href="tel:+22893273473" class="contact-link-card">
+                <span class="mono contact-link-label">Téléphone / WhatsApp (Togo)</span>
+                <strong>+228 93 27 34 73 &nbsp;/&nbsp; +228 97 50 32 10</strong>
+              </a>
+              <a href="https://github.com/ThierryEyram" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                <span class="mono contact-link-label">GitHub</span>
+                <strong>github.com/ThierryEyram</strong>
+              </a>
+              <a href="https://www.linkedin.com/search/results/all/?keywords=Eyram%20Koudzo%20Thierry%20DZABODO" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+                <span class="mono contact-link-label">LinkedIn</span>
+                <strong>Eyram Koudzo Thierry DZABODO</strong>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom et organisation" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" placeholder="vous@organisation.com" required />
+            </div>
+            <div class="form-row">
+              <label for="subject">Sujet</label>
+              <select id="subject" name="subject">
+                <option value="Data Science & Machine Learning">Data Science &amp; Machine Learning</option>
+                <option value="Analyse Quantitative & Finance">Analyse Quantitative &amp; Finance</option>
+                <option value="Suivi & Évaluation (M&E) / Kobo">Suivi &amp; Évaluation (M&amp;E) / Kobo</option>
+                <option value="Formation Python & IA">Formation Python &amp; IA</option>
+                <option value="Opportunité professionnelle">Opportunité professionnelle</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Décrivez brièvement votre besoin, le contexte ou l'échéance..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
+            <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="currentYear">2026</span> <strong>DZABODO Eyram Koudzo Thierry</strong> &mdash; Data Scientist, Économiste Quantitatif &amp; Analyste Statistique &middot; Lomé, Togo.</p>
+      <a href="#accueil" class="back-top mono">&uarr; Haut de page</a>
+    </div>
+  </footer>
+
+  <!-- Modale Étude de Cas -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Fermer la fenêtre">&times;</button>
+      <span class="mono modal-cat" id="modalCat"></span>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-summary" id="modalSummary"></p>
+
+      <div class="modal-kpis" id="modalKpis"></div>
+
+      <div class="modal-sections">
+        <div>
+          <h4>Contexte &amp; Mission</h4>
+          <p id="modalContext"></p>
+        </div>
+        <div>
+          <h4>Démarche &amp; Outils mobilisés</h4>
+          <ul id="modalMethodology"></ul>
+        </div>
+        <div>
+          <h4>Résultats &amp; Apport</h4>
+          <p id="modalImpact"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="project-tags mono" id="modalTags"></div>
+        <a href="#contact" class="btn btn-secondary" id="modalContactBtn">Échanger sur ce projet</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
